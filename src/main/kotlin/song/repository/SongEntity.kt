@@ -1,5 +1,6 @@
 package com.wafflestudio.seminar.spring2023.song.repository
 
+import com.wafflestudio.seminar.spring2023.playlist.repository.PlaylistSongEntity
 import jakarta.persistence.Entity
 import jakarta.persistence.FetchType
 import jakarta.persistence.GeneratedValue

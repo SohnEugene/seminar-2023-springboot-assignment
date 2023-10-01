@@ -1,6 +1,5 @@
 package com.wafflestudio.seminar.spring2023.song.repository
 
-import com.wafflestudio.seminar.spring2023.song.service.Song
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
@@ -10,7 +9,7 @@ import jakarta.persistence.ManyToOne
 import jakarta.persistence.FetchType
 
 @Entity(name = "song_artists")
-class SongArtistEntity {
+class SongArtistEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0L,
@@ -22,4 +21,4 @@ class SongArtistEntity {
     @ManyToOne
     @JoinColumn(name = "song_id")
     val song: SongEntity,
-}
+)

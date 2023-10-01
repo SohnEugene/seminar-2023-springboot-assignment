@@ -4,7 +4,7 @@ import com.wafflestudio.seminar.spring2023.user.repository.UserEntity
 import jakarta.persistence.*
 
 @Entity(name = "playlist_likes")
-class PlaylistLikeEntity {
+class PlaylistLikeEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id:Long = 0L,
@@ -16,4 +16,4 @@ class PlaylistLikeEntity {
     @ManyToOne
     @JoinColumn(name = "user_id")
     val song: UserEntity,
-}
+)

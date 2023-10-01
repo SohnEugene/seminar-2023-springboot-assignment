@@ -11,7 +11,7 @@ import jakarta.persistence.OneToMany
 @Entity(name = "playlists")
 //@Table(name = "playlists")는 안 되는 이유?
 
-class PlaylistEntity {
+class PlaylistEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
@@ -27,4 +27,4 @@ class PlaylistEntity {
     @ManyToOne
     @JoinColumn(name = "group_id")
     val group:PlaylistGroupEntity,
-}
+)

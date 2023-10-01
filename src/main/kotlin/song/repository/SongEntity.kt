@@ -11,7 +11,7 @@ import jakarta.persistence.ManyToOne
 import jakarta.persistence.OneToMany
 
 @Entity(name = "songs")
-class SongEntity {
+class SongEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0L,
@@ -28,4 +28,4 @@ class SongEntity {
 
     @OneToMany(mappedBy = "song")
     val playlist_songs: List<PlaylistSongEntity>,
-}
+)

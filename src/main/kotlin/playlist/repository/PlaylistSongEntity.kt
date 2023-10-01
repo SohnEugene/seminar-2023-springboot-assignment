@@ -4,7 +4,7 @@ import com.wafflestudio.seminar.spring2023.song.repository.SongEntity //다른 �
 import jakarta.persistence.*
 
 @Entity(name = "playlist_songs")
-class PlaylistSongEntity {
+class PlaylistSongEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id:Long = 0L,
@@ -16,4 +16,4 @@ class PlaylistSongEntity {
     @ManyToOne
     @JoinColumn(name = "song_id")
     val song: SongEntity,
-}
+)
